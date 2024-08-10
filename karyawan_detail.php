@@ -61,9 +61,6 @@ else {
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td colspan="3">&nbsp;</td>
-	</tr>
-	<tr>
 		<td width="20%"><b>Jabatan</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><?php echo $result['jabatan'];?></td>

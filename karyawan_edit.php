@@ -98,10 +98,8 @@
 										<div class="col-sm-3">
 											<select name="akses" id="akses" class="form-control" required>
 												<option value="<?php echo $data['hak_akses'] ?>" selected><?php echo $data['hak_akses'] ?></option>
-												<option value="Leader">Leader</option>
-												<option value="Manager">Manager</option>
-												<option value="Pegawai">Pegawai</option>
-												<option value="Supervisor">Supervisor</option>
+												<option value="Pejabat">Pejabat</option>
+												<option value="Staff">Staff</option>
 											</select>
 										</div>
 									</div>

@@ -64,10 +64,8 @@
 											<select class="form-control" name="akses" required>
 											<option value="">======= Login Sebagai =======</option>
 											<option value="Admin">Administrator</option>
-											<option value="Lead">Leader</option>
-											<option value="Mng">Manager</option>
-											<option value="Pgw">Pegawai</option>
-											<option value="Spv">Supervisor</option>
+											<option value="Mng">Pejabat</option>
+											<option value="Spv">Staff/Pegawai</option>
 											</select>
 										</div>
 										<div class="form-group">
