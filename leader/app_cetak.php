@@ -76,7 +76,7 @@
 			<br />
 			<br />
 			<table class="table table-bordered">
-<h3>
+			<h3>
 				<tbody>
 					<tr>
 						<td width="30%">No. Cuti</td>
