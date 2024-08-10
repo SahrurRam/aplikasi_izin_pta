@@ -77,6 +77,23 @@
 			<br />
 			<table class="table table-bordered">
 <h3>
+			<p>Perihal: <b>Permohonan Izin Keluar Kantor</b></p>
+			<p>Kepada</p>
+			<p>Yth. Sekretaris Pengadilan Tinggi Agama Makassar</p>
+			<p>Saya yang bertanda tangan dibawah ini:</p>
+			<p>Nama&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $result['nama_emp'];?></p>
+			<p>NIP&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;: <?php echo $result['npp'];?></p>
+			<p>Jabatan&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; : <?php echo $result['jabatan'];?></p>
+			<p>Unit Kerja&emsp;&emsp;&emsp;&emsp;&ensp;: Pengadilan Tinggi Agama Makassar</p>
+			<p>Memohon keluar kantor</p>
+			<p>Pada Hari/Tanggal&emsp; : <?php echo IndonesiaTgl($result['tgl_awal']);?></p>
+			<p>Sampai Pada&emsp;&emsp;&emsp;&ensp;: <?php echo IndonesiaTgl($result['tgl_akhir']);?></p>
+			<p>Untuk keperluan&emsp;&emsp;: <?php echo $result['keterangan'];?></p>
+			<p>Demikian permohonan ini kami sampaikan, atas perkenaannya kami ucapkan terimakasih</p>
+			<p style="text-align: right;">Pemohon Izin&emsp;&emsp;</p>
+			<p style="text-align: right;"><img src="foto/<?php echo $result['foto_emp'];?>" width="70px">&emsp;&emsp;&emsp;</p>
+			<p style="text-align: right;"><?php echo $result['nama_emp'];?>&emsp;&emsp;</p>
+
 				<tbody>
 					<tr>
 						<td width="30%">No. Cuti</td>
