@@ -44,7 +44,7 @@ if(isset($_POST['login'])) {
 				// mendaftarkan session jika username di temukan
 				if($rows == 1) {
 					// membuat variabel session
-					$_SESSION['pejabat'] = strtolower($dataku['npp']);
+					$_SESSION['Pejabat'] = strtolower($dataku['npp']);
 					// mengarahkan ke halaman indeks.php
 					header("location: manager/index.php?login=success");
 				}else{
