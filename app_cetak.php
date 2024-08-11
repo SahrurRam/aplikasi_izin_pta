@@ -72,11 +72,11 @@
 <br/>
 	<section id="body-of-report">
 		<div class="container-fluid">
-			<h4 class="text-center">FORM PENGAJUAN CUTI (APPROVED)</h4>
-			<br />
+			<h4 class="text-center"><b>SURAT IZIN KELUAR KANTOR</b></h4>
 			<br />
 			<table class="table table-bordered">
-<h3>
+<h4>
+
 			<p>Perihal: <b>Permohonan Izin Keluar Kantor</b></p>
 			<p>Kepada</p>
 			<p>Yth. Sekretaris Pengadilan Tinggi Agama Makassar</p>
@@ -94,57 +94,8 @@
 			<p style="text-align: right;"><img src="foto/<?php echo $result['foto_emp'];?>" width="70px">&emsp;&emsp;&emsp;</p>
 			<p style="text-align: right;"><?php echo $result['nama_emp'];?>&emsp;&emsp;</p>
 
-				<tbody>
-					<tr>
-						<td width="30%">No. Cuti</td>
-						<td><?php echo $result['no_cuti'];?></td>
-					</tr>
-					<tr>
-						<td>NPP</td>
-						<td><?php echo $result['npp'] ?></td>
-					</tr>
-					<tr>
-						<td>Pemohon</td>
-						<td><?php echo $result['nama_emp'] ?></td>
-					</tr>
-					<tr>
-						<td>Telepon</td>
-						<td><?php echo $result['telp_emp'];?></td>
-					</tr>
-					<tr>
-						<td>Divisi</td>
-						<td><?php echo $result['divisi'];?></td>
-					</tr>
-					<tr>
-						<td>Jabatan</td>
-						<td><?php echo $result['jabatan'];?></td>
-					</tr>
-					<tr>
-						<td>Tanggal Pengajuan</td>
-						<td><?php echo IndonesiaTgl($result['tgl_pengajuan']);?></td>
-					</tr>
-					<tr>
-						<td>Tanggal Mulai</td>
-						<td><?php echo IndonesiaTgl($result['tgl_awal']);?></td>
-					</tr>
-					<tr>
-						<td>Tanggal Akhir</td>
-						<td><?php echo IndonesiaTgl($result['tgl_akhir']);?></td>
-					</tr>
-					<tr>
-						<td>Durasi</td>
-						<td><?php echo $result['durasi'];?> Hari</td>
-					</tr>
-					<tr>
-						<td>Keterangan</td>
-						<td><?php echo $result['keterangan'];?></td>
-					</tr>
-					<tr>
-						<td>Status</td>
-						<td><?php echo $result['stt_cuti'];?></td>
-					</tr>
-				</tbody>
-				</h3>
+
+				</h4>
 			</table>
 			<br>
 			<div>
