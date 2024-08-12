@@ -2,6 +2,7 @@
 	include("sess_check.php");
 
 	include("dist/function/format_tanggal.php");
+	include("dist/function/format_rupiah.php");
 	$no 	 = $_GET['no'];
 	$sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp
 			AND cuti.no_cuti ='$no'";

@@ -5,6 +5,7 @@
 	$pagedesc = "Setujui Izin";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
+	include("dist/function/format_rupiah.php");
 	$id = $sess_mngid;
 ?>
 <!-- top of file -->

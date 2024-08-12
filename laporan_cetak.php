@@ -2,7 +2,7 @@
 	include("sess_check.php");
 
 	include("dist/function/format_tanggal.php");
-
+	include("dist/function/format_rupiah.php");
 	$mulai 	 = $_GET['awal'];
 	$selesai = $_GET['akhir'];
 	$sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp
