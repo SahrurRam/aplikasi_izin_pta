@@ -26,7 +26,7 @@
 
 	<title>Sistem Informasi Pengajuan Izin Pengadilan Tinggi Agama Makassar - <?php echo $pagedesc ?></title>
 
-	<link href="libs/images/isk-logo.jpg" rel="icon" type="images/x-icon">
+	<link href="libs/images/logo-pta.png" rel="icon" type="images/x-icon">
 
     <!-- Bootstrap Core CSS -->
 	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -120,33 +120,7 @@
 								echo '<li>';
 							}
 						?>
-                        <!-- open <li> tag generated with php, see line 155-160 -->
-							<a href="#"><i class="fa fa-check-square fa-fw"></i>&nbsp;Approval<span class="fa arrow"></span></a>
-							<ul class="nav nav-second-level">
-								<?php
-									if($pagedesc == "Approval Cuti") {
-										echo '<li><a href="approval_cuti.php" class="active">Approval Cuti</a></li>';
-									}
-									else {
-										echo '<li><a href="approval_cuti.php">Approval Cuti</a></li>';
-									}
-									if($pagedesc == "Data Approval") {
-										echo '<li><a href="approval.php" class="active">Semua Data</a></li>';
-									}
-									else {
-										echo '<li><a href="approval.php">Semua Data</a></li>';
-									}
-								?>
-							</ul><!-- /.nav-second-level -->
-						</li>
-						<?php
-													if(isset($menuparent) && $menuparent == "cuti") {
-								echo '<li class="active">';
-							}
-							else {
-								echo '<li>';
-							}
-						?>
+
                         <!-- open <li> tag generated with php, see line 155-160 -->
 							<a href="#"><i class="fa fa-recycle fa-fw"></i>&nbsp;Pengajuan Izin<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
@@ -158,22 +132,22 @@
 										echo '<li><a href="cuti_create.php">Buat Pengajuan</a></li>';
 									}
 									if($pagedesc == "Menunggu Approval") {
-										echo '<li><a href="cuti_waitapp.php" class="active">Menunggu Approval</a></li>';
+										echo '<li><a href="cuti_waitapp.php" class="active">Menunggu Persetujaun</a></li>';
 									}
 									else {
-										echo '<li><a href="cuti_waitapp.php">Menunggu Approval</a></li>';
+										echo '<li><a href="cuti_waitapp.php">Menunggu Persetujuan</a></li>';
 									}
 									if($pagedesc == "Rejected") {
-										echo '<li><a href="cuti_reject.php" class="active">Rejected</a></li>';
+										echo '<li><a href="cuti_reject.php" class="active">Ditolak</a></li>';
 									}
 									else {
-										echo '<li><a href="cuti_reject.php">Rejected</a></li>';
+										echo '<li><a href="cuti_reject.php">Ditolak</a></li>';
 									}
 									if($pagedesc == "Approved") {
-										echo '<li><a href="cuti_app.php" class="active">Approved</a></li>';
+										echo '<li><a href="cuti_app.php" class="active">Disetujui</a></li>';
 									}
 									else {
-										echo '<li><a href="cuti_app.php">Approved</a></li>';
+										echo '<li><a href="cuti_app.php">Disetujui</a></li>';
 									}
 								?>
 							</ul><!-- /.nav-second-level -->

@@ -2,7 +2,6 @@
 	include("sess_check.php");
 
 	include("dist/function/format_tanggal.php");
-	include("dist/function/format_rupiah.php");
 	$no 	 = $_GET['no'];
 	$sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp
 			AND cuti.no_cuti ='$no'";
@@ -10,7 +9,19 @@
 	$result = mysqli_fetch_array($query);
 	// deskripsi halaman
 	$pagedesc = "Cetak Form Cuti";
-	$pagetitle = str_replace(" ", "_", $pagedesc)
+	$pagetitle = str_replace(" ", "_", $pagedesc);
+
+	
+	// setting tanggal
+	$haries = array("Sunday" => "Minggu", "Monday" => "Senin", "Tuesday" => "Selasa", "Wednesday" => "Rabu", "Thursday" => "Kamis", "Friday" => "Jum'at", "Saturday" => "Sabtu");
+	$bulans = array("", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+	$bulans_count = count($bulans);
+	// tanggal bulan dan tahun hari ini
+	$hari_ini = $haries[date("l")];
+	$bulan_ini = $bulans[date("n")];
+	$tanggal = date("d");
+	$bulan = date("m");
+	$tahun = date("Y");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +34,7 @@
 
 	<title><?php echo $pagetitle ?></title>
 
-	<link href="libs/images/isk-logo.jpg" rel="icon" type="images/x-icon">
+	<link href="libs/images/logo-pta.png" rel="icon" type="images/x-icon">
 
 	<!-- Bootstrap Core CSS -->
 	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,27 +58,6 @@
 </head>
 
 <body>
-	<section id="header-kop">
-		<div class="container-fluid">
-			<table class="table table-borderless">
-				<tbody>
-					<tr>
-						<td class="text-left" width="20%">
-							<img src="libs/images/isk-logo.jpg" alt="logo-dkm" width="70" />
-						</td>
-						<td class="text-center" width="60%">
-						<b>PT. ISK INDONESIA</b> <br>
-						Jl. Maligi VII Lot Q-4C, Kawasan Industri KIIC, Sukaluyu, Kabupaten Karawang, Jawa Barat 17520<br>
-						Telp: (021) 89115030<br>
-						<td class="text-right" width="20%">
-							<img src="libs/images/isk.jpg" alt="logo-dkm" width="130" height="70"/>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<hr class="line-top" />
-		</div>
-	</section>
 <br/>
 <br/>
 	<section id="body-of-report">
@@ -76,31 +66,19 @@
 			<br />
 			<table class="table table-bordered">
 <h4>
-
-			<p>Perihal: <b>Permohonan Izin Keluar Kantor</b></p>
-			<p>Kepada</p>
-			<p>Yth. Sekretaris Pengadilan Tinggi Agama Makassar</p>
-			<p>Saya yang bertanda tangan dibawah ini:</p>
+			<p>Pejabat&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;:</p>
+			<p>Memberikan izin keluar kantor kepada :</p>
 			<p>Nama&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $result['nama_emp'];?></p>
 			<p>NIP&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;: <?php echo $result['npp'];?></p>
-			<p>Jabatan&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; : <?php echo $result['jabatan'];?></p>
 			<p>Unit Kerja&emsp;&emsp;&emsp;&emsp;&ensp;: Pengadilan Tinggi Agama Makassar</p>
-			<p>Memohon keluar kantor</p>
 			<p>Pada Hari/Tanggal&emsp; : <?php echo IndonesiaTgl($result['tgl_awal']);?></p>
 			<p>Sampai Pada&emsp;&emsp;&emsp;&ensp;: <?php echo IndonesiaTgl($result['tgl_akhir']);?></p>
 			<p>Untuk keperluan&emsp;&emsp;: <?php echo $result['keterangan'];?></p>
-			<p>Demikian permohonan ini kami sampaikan, atas perkenaannya kami ucapkan terimakasih</p>
-			<p style="text-align: right;">Pemohon Izin&emsp;&emsp;</p>
-			<p style="text-align: right;"><img src="foto/<?php echo $result['foto_emp'];?>" width="70px">&emsp;&emsp;&emsp;</p>
-			<p style="text-align: right;"><?php echo $result['nama_emp'];?>&emsp;&emsp;</p>
 
-
-				</h4>
-			</table>
-			<br>
-			<div>
-			<label>*Form ini dicetak oleh sistem dan tidak memerlukan tanda tangan atau pengesahan lain.</label>
-			</div>
+			<p style="text-align: right;">Makassar, <?php echo $tanggal." ".$bulan_ini." ".$tahun ?></p>
+			<p style="text-align: right;">Pejabat yang memberikan izin</p>
+			<br><br><br>
+			</h4>
 			
 		</div><!-- /.container -->
 	</section>

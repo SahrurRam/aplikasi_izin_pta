@@ -72,7 +72,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $d; ?></div>
-										<div><h4>Menunggu diapprove</h4></div>
+										<div><h4>Menunggu Persetujuan</h4></div>
 									</div>
 								</div>
 							</div>
@@ -132,7 +132,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $a; ?></div>
-										<div><h4>Approved</h4></div>
+										<div><h4>Disetujui</h4></div>
 									</div>
 								</div>
 							</div>
@@ -155,7 +155,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $b; ?></div>
-										<div><h4>Menunggu Approval</h4></div>
+										<div><h4>Menunggu Persetujuan</h4></div>
 									</div>
 								</div>
 							</div>
@@ -178,7 +178,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $c; ?></div>
-										<div><h4>Rejected</h4></div>
+										<div><h4>Ditolak</h4></div>
 									</div>
 								</div>
 							</div>

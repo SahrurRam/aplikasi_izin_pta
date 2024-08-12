@@ -5,7 +5,6 @@
 	$pagedesc = "Menunggu Approval";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
-	include("dist/function/format_rupiah.php");
 	$id = $sess_spvid;
 ?>
 <!-- top of file -->
@@ -14,7 +13,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Izin Menunggu Disetujui</h1>
+                        <h1 class="page-header">Data Izin Menunggu Persetujuan</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				

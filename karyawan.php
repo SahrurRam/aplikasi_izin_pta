@@ -5,7 +5,6 @@
 	$pagedesc = "Data Karyawan";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
-	include("dist/function/format_rupiah.php");
 ?>
 <!-- top of file -->
 		<!-- Page Content -->

@@ -10,7 +10,7 @@
 
 	<title>Sistem Informasi Pengajuan Izin - <?php echo $pagedesc ?></title>
 
-	<link href="libs/images/isk-logo.jpg" rel="icon" type="images/x-icon">
+	<link href="libs/images/logo-pta.png" rel="icon" type="images/x-icon">
 
 	<!-- Bootstrap Core CSS -->
 	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,7 +65,7 @@
 											<option value="">======= Login Sebagai =======</option>
 											<option value="Admin">Administrator</option>
 											<option value="Pejabat">Pejabat</option>
-											<option value="Staff">Staff/Pegawai</option>
+											<option value="Staff">Staff</option>
 											</select>
 										</div>
 										<div class="form-group">
