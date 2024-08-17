@@ -2,7 +2,7 @@
 	include("sess_check.php");
 	
 	// deskripsi halaman
-	$pagedesc = "Setujui Izin";
+	$pagedesc = "Approval";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
 	include("dist/function/format_rupiah.php");
@@ -28,7 +28,7 @@
 							<div class="panel-body">
 						<?php
 								$Sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp AND 
-										cuti.manager='$id' AND cuti.stt_cuti='Menunggu Approval Manager' ORDER BY cuti.tgl_pengajuan DESC";
+										cuti.manager='$id' AND cuti.stt_cuti='Menunggu Approval Pejabat' ORDER BY cuti.tgl_pengajuan DESC";
 								$Qry = mysqli_query($conn, $Sql);
 								
 							?>						

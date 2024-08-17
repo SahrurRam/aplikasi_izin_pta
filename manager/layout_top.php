@@ -124,7 +124,7 @@
 							<a href="#"><i class="fa fa-check-square fa-fw"></i>&nbsp;Approval<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
 								<?php
-									if($pagedesc == "Setujui Izin") {
+									if($pagedesc == "Approval") {
 										echo '<li><a href="approval_cuti.php" class="active">Setujui Izin</a></li>';
 									}
 									else {

@@ -41,7 +41,7 @@
 						<form class="form-horizontal">
 							<div class="panel panel-default">
 								<div class="panel-body">
-								<h2 align="center">Selamat Datang, <?php echo $res['nama_emp'];?>!</h2>
+								<h2 align="center">Selamat Datang, Bapak/Ibu <?php echo $res['nama_emp'];?>!</h2>
 								<hr/>
 								<center><img src="../foto/<?php echo $res['foto_emp']?>" width="120px"></center>
 								<hr/>

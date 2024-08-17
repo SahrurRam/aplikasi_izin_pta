@@ -6,7 +6,7 @@ include("sess_check.php");
 include("dist/function/format_tanggal.php");
 if($_GET) {
 	$kode = $_GET['code'];
-	$sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp AND cuti.no_cuti='". $_GET['code'] ."'";
+	$sql = "SELECT * FROM employee WHERE npp='". $_GET['code'] ."'";
 	$query = mysqli_query($conn,$sql);
 	$result = mysqli_fetch_array($query);
 }
@@ -24,20 +24,12 @@ else {
 </div>
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-	<h4 class="modal-title" id="myModalLabel">Detail Pengajuan Izin</h4>
+	<h4 class="modal-title" id="myModalLabel">Detail Karyawan</h4>
 </div>
 <div><br/>
 <table width="100%">
 	<tr>
-		<td width="20%"><b>No. Izin</b></td>
-		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo $result['no_cuti'];?></td>
-	</tr>
-	<tr>
-		<td colspan="3">&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="20%"><b>NIP</b></td>
+		<td width="20%"><b>NPP</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><?php echo $result['npp'];?></td>
 	</tr>
@@ -45,7 +37,7 @@ else {
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Nama Pemohon</b></td>
+		<td width="20%"><b>Nama</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><?php echo $result['nama_emp'];?></td>
 	</tr>
@@ -53,65 +45,80 @@ else {
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Tangal Pengajuan</b></td>
+		<td width="20%"><b>Jenis Kelamin</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo IndonesiaTgl($result['tgl_pengajuan']);?></td>
+		<td width="78%"><?php echo $result['jk_emp'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Tanggal Mulai</b></td>
+		<td width="20%"><b>Telepon</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo IndonesiaTgl($result['tgl_awal']);?></td>
+		<td width="78%"><?php echo $result['telp_emp'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Tanggal Akhir</b></td>
+		<td width="20%"><b>Divisi</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo IndonesiaTgl($result['tgl_akhir']);?></td>
+		<td width="78%"><?php echo $result['divisi'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Durasi</b></td>
+		<td width="20%"><b>Jabatan</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo $result['durasi'];?> Hari</td>
+		<td width="78%"><?php echo $result['jabatan'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Keterangan</b></td>
+		<td width="20%"><b>Alamat</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo $result['keterangan'];?></td>
+		<td width="78%"><?php echo $result['alamat'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Status</b></td>
+		<td width="20%"><b>Jumlah Cuti</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo $result['stt_cuti'];?></td>
+		<td width="78%"><?php echo $result['jml_cuti'];?></td>
 	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>
-	<?php
-		if($result['ket_reject']!=""){
-		?>
 	<tr>
-		<td width="20%"><b>Keterangan Reject</b></td>
+		<td width="20%"><b>Hak Akses</b></td>
 		<td width="2%"><b>:</b></td>
-		<td width="78%"><b><?php echo $result['ket_reject'];?></b></td>
+		<td width="78%"><b><?php echo $result['hak_akses'];?></b></td>
 	</tr>
-	<?php
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="20%"><b>Aktif</b></td>
+		<td width="2%"><b>:</b></td>
+		<td width="78%"><?php 
+		if($result['active']==1){
+		echo "Ya";
 		}else{
+		echo "Tidak";
 		}
-		?>
+		?></td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="20%"><b>Foto</b></td>
+		<td width="2%"><b>:</b></td>
+		<td width="78%"><img src="../foto/<?php echo $result['foto_emp'];?>" width="70px"></td>
+	</tr>
 	<tr>
 		<td colspan="3">&nbsp;</td>
 	</tr>

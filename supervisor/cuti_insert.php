@@ -24,7 +24,6 @@ $ress = mysqli_fetch_array($qpgw);
 
 $jml = $ress['jml_cuti'];
 
-
 if($durasi>$jml){
 	echo "<script type='text/javascript'>
 			alert('Durasi cuti lebih banyak dari jumlah cuti tersedia!.'); 

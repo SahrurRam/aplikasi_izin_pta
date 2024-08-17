@@ -23,12 +23,12 @@ if ($_GET) {
 </div>
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-	<h4 class="modal-title" id="myModalLabel">Detail Pengajuan Cuti</h4>
+	<h4 class="modal-title" id="myModalLabel">Detail Pengajuan Izin</h4>
 </div>
 <div><br/>
 <table width="100%">
 	<tr>
-		<td width="20%"><b>No. Cuti</b></td>
+		<td width="20%"><b>No. Izin</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><?php echo $result['no_cuti']; ?></td>
 	</tr>
@@ -36,7 +36,7 @@ if ($_GET) {
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>NPP</b></td>
+		<td width="20%"><b>NIP</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><?php echo $result['npp']; ?></td>
 	</tr>
