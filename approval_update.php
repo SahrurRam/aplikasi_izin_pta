@@ -4,13 +4,13 @@ include("sess_check.php");
 $no=$_POST['no'];
 $aksi=$_POST['aksi'];
 $reject=$_POST['reject'];
-$stt = "";
+$stt_cuti = "";
 $null = 0;
 
 if($aksi=="2"){
-	$stt="Rejected";
+	$stt_cuti="Rejected";
 	$sql = "UPDATE cuti SET
-			stt_cuti='". $stt ."',
+			stt_cuti='". $stt_cuti ."',
 			lead_app='". $null ."',
 			spv_app='". $null ."',
 			mng_app='". $null ."',
@@ -20,10 +20,10 @@ if($aksi=="2"){
 		header("location: app_wait.php?act=update&msg=success");
 	
 }else{
-	$stt="Approved";
+	$stt_cuti="Approved";
 	$num	=1;
 	$sql = "UPDATE cuti SET
-			stt_cuti='". $stt ."',
+			stt_cuti='". $stt_cuti ."',
 			hrd_app='". $num ."'
 			WHERE no_cuti='". $no ."'";
 		$ress = mysqli_query($conn, $sql);

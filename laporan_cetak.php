@@ -24,7 +24,7 @@
 
 	<title><?php echo $pagetitle ?></title>
 
-	<link href="libs/images/isk-logo.jpg" rel="icon" type="images/x-icon">
+	<link href="libs/images/logo-pta.png" rel="icon" type="images/x-icon">
 
 
 	<!-- Bootstrap Core CSS -->
@@ -49,27 +49,6 @@
 </head>
 
 <body>
-	<section id="header-kop">
-		<div class="container-fluid">
-			<table class="table table-borderless">
-				<tbody>
-					<tr>
-						<td class="text-left" width="20%">
-							<img src="libs/images/isk-logo.jpg" alt="logo-dkm" width="70" />
-						</td>
-						<td class="text-center" width="60%">
-						<b>Pengadilan Tinggi Agama</b> <br>
-						Jl. A. P. Pettarani No.66, Tamamaung, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231<br>
-						Telp: (0411) 452653<br>
-						<td class="text-right" width="20%">
-							<img src="libs/images/isk.jpg" alt="logo-dkm" width="130" height="70"/>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<hr class="line-top" />
-		</div>
-	</section>
 
 	<section id="body-of-report">
 		<div class="container-fluid">
@@ -80,7 +59,7 @@
 				<thead>
 					<tr>
 						<th width="1%">No</th>
-						<th width="10%">No Cuti</th>
+						<th width="10%">No Izin</th>
 						<th width="10%">Nama Pemohon</th>
 						<th width="5%">Tgl Pengajuan</th>
 						<th width="5%">Tgl Awal</th>

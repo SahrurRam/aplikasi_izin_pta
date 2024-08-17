@@ -2,7 +2,7 @@
 	include("sess_check.php");
 	
 	// deskripsi halaman
-	$pagedesc = "Approval Cuti";
+	$pagedesc = "Approval";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
 	include("dist/function/format_rupiah.php");
@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Approval Cuti</h1>
+                        <h1 class="page-header">Data Persetujuan Izin</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -28,7 +28,7 @@
 							<div class="panel-body">
 						<?php
 								$Sql = "SELECT cuti.*, employee.* FROM cuti, employee WHERE cuti.npp=employee.npp AND 
-										cuti.manager='$id' AND cuti.stt_cuti='Menunggu Approval Manager' ORDER BY cuti.tgl_pengajuan DESC";
+										cuti.manager='$id' AND cuti.stt_cuti='Menunggu Approval Pejabat' ORDER BY cuti.tgl_pengajuan DESC";
 								$Qry = mysqli_query($conn, $Sql);
 								
 							?>						
@@ -36,7 +36,7 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">No Cuti</th>
+											<th width="10%">No Izin</th>
 											<th width="10%">Nama Pemohon</th>
 											<th width="5%">Tgl Pengajuan</th>
 											<th width="5%">Tgl Awal</th>

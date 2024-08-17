@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Cuti Rejected</h1>
+                        <h1 class="page-header">Data Izin Ditolak</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -36,12 +36,11 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">No Cuti</th>
+											<th width="10%">No Izin</th>
 											<th width="5%">Tgl Pengajuan</th>
 											<th width="5%">Tgl Awal</th>
 											<th width="5%">Tgl Akhir</th>
 											<th width="5%">Status</th>
-											<th width="10%">Ket. Rejected</th>
 											<th width="5%">Opsi</th>
 										</tr>
 									</thead>

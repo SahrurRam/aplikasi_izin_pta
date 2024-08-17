@@ -52,72 +52,13 @@
 					</div><!-- /.col-lg-12 -->
 				</div><!-- /.row -->
 
-				<div class="row">
-					<div class="col-lg-12">
-						<form class="form-horizontal">
-							<div class="panel panel-default">
-								<div class="panel-body">
-								<h2 align="center">Approval Pengajuan Izin</h2>
-								</div>
-							</div><!-- /.panel -->
-						</form>
-					</div><!-- /.col-lg-12 -->
-				</div><!-- /.row -->
-				<div class="row">					
-					<div class="col-lg-6 col-md-6">
-						<div class="panel panel-yellow">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-plus-circle fa-3x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge"><?php echo $d; ?></div>
-										<div><h4>Menunggu diapprove</h4></div>
-									</div>
-								</div>
-							</div>
-							<a href="approval_cuti.php">
-								<div class="panel-footer">
-									<span class="pull-left">Lihat Rincian</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div><!-- /.panel-green -->
-
-					<div class="col-lg-6 col-md-6">
-						<div class="panel panel-primary">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-check-circle fa-3x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge"><?php echo $e; ?></div>
-										<div><h4>Semua Data</h4></div>
-									</div>
-								</div>
-							</div>
-							<a href="approval.php">
-								<div class="panel-footer">
-									<span class="pull-left">Lihat Rincian</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div><!-- /.panel-green -->
-
-				</div><!-- /.row -->
 				
 				<div class="row">
 					<div class="col-lg-12">
 						<form class="form-horizontal">
 							<div class="panel panel-default">
 								<div class="panel-body">
-								<h2 align="center">Pengajuan Izin Diri</h2>
+								<h2 align="center">Pengajuan Izin</h2>
 								</div>
 							</div><!-- /.panel -->
 						</form>
@@ -133,7 +74,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $a; ?></div>
-										<div><h4>Approved</h4></div>
+										<div><h4>Disetujui</h4></div>
 									</div>
 								</div>
 							</div>
@@ -156,7 +97,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $b; ?></div>
-										<div><h4>Menunggu Approval</h4></div>
+										<div><h4>Menunggu Persetujuan</h4></div>
 									</div>
 								</div>
 							</div>
@@ -179,7 +120,7 @@
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge"><?php echo $c; ?></div>
-										<div><h4>Rejected</h4></div>
+										<div><h4>Ditolak</h4></div>
 									</div>
 								</div>
 							</div>
