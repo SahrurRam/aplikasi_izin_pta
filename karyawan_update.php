@@ -6,7 +6,6 @@
 		$npplama=$_POST['npplama'];
 		$npp=$_POST['npp'];
 		$nama=$_POST['nama'];
-		$jml=$_POST['jml'];
 		$jk=$_POST['jk'];
 		$telp=$_POST['telp'];
 		$jabatan=$_POST['jabatan'];
@@ -33,7 +32,6 @@
 					jabatan='". $jabatan ."',
 					alamat='". $alamat ."',
 					hak_akses='". $akses ."',
-					jml_cuti='". $jml ."',
 					password='". $pass ."',
 					active='". $aktif ."',
 					foto_emp='". $newfoto ."'
@@ -49,7 +47,6 @@
 					jabatan='". $jabatan ."',
 					alamat='". $alamat ."',
 					hak_akses='". $akses ."',
-					jml_cuti='". $jml ."',
 					password='". $pass ."',
 					active='". $aktif ."'
 					WHERE npp='". $npplama ."'";
@@ -71,7 +68,6 @@
 					jabatan='". $jabatan ."',
 					alamat='". $alamat ."',
 					hak_akses='". $akses ."',
-					jml_cuti='". $jml ."',
 					password='". $pass ."',
 					active='". $aktif ."',
 					foto_emp='". $newfoto ."'
@@ -86,7 +82,6 @@
 					jabatan='". $jabatan ."',
 					alamat='". $alamat ."',
 					hak_akses='". $akses ."',
-					jml_cuti='". $jml ."',
 					password='". $pass ."',
 					active='". $aktif ."'
 					WHERE npp='". $npplama ."'";

@@ -8,7 +8,6 @@ $jk=$_POST['jk'];
 $telp=$_POST['telp'];
 $jabatan=$_POST['jabatan'];
 $akses=$_POST['akses'];
-$jml=$_POST['jml'];
 $alamat=$_POST['alamat'];
 $foto=substr($_FILES["foto"]["name"],-5);
 $newfoto = "foto".$npp.$foto;
@@ -19,8 +18,8 @@ $sqlcek = "SELECT * FROM employee WHERE npp='$npp'";
 $resscek = mysqli_query($conn, $sqlcek);
 $rowscek = mysqli_num_rows($resscek);
 if($rowscek<1){
-	$sql="INSERT INTO employee(npp,nama_emp,jk_emp,telp_emp,jabatan,alamat,hak_akses,jml_cuti,password,foto_emp,active,id_adm)
-		  VALUES('$npp','$nama','$jk','$telp','$jabatan','$alamat','$akses','$jml','$npp','$newfoto','$aktif','$id')";
+	$sql="INSERT INTO employee(npp,nama_emp,jk_emp,telp_emp,jabatan,alamat,hak_akses,password,foto_emp,active,id_adm)
+		  VALUES('$npp','$nama','$jk','$telp','$jabatan','$alamat','$akses','$npp','$newfoto','$aktif','$id')";
 	$ress = mysqli_query($conn, $sql);
 	if($ress){
 		move_uploaded_file($_FILES["foto"]["tmp_name"],"foto/".$newfoto);

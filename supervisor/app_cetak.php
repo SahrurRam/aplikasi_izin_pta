@@ -51,7 +51,7 @@
 <br/>
 	<section id="body-of-report">
 		<div class="container-fluid">
-			<h4 class="text-center">FORM PENGAJUAN IZIN (APPROVED)</h4>
+			<h4 class="text-center"><b>SURAT PERMOHONAN IZIN KANTOR</b></h4>
 			<br />
 			<br />
 			<table class="table table-bordered">
@@ -66,7 +66,7 @@
 			<p>Unit Kerja&emsp;&emsp;&emsp;&emsp;&ensp;: Pengadilan Tinggi Agama Makassar</p>
 			<p>Memohon keluar kantor</p>
 			<p>Pada Hari/Tanggal&emsp; : <?php echo IndonesiaTgl($result['tgl_awal']);?></p>
-			<p>Sampai Pada&emsp;&emsp;&emsp;&ensp;: <?php echo IndonesiaTgl($result['tgl_akhir']);?></p>
+			<p>Pukul&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; : <?php echo ($result['jam_awal']);?> - <?php echo ($result['jam_akhir']);?></p>
 			<p>Untuk keperluan&emsp;&emsp;: <?php echo $result['keterangan'];?></p>
 			<p>Demikian permohonan ini kami sampaikan, atas perkenaannya kami ucapkan terimakasih</p>
 			<p style="text-align: right;">Pemohon Izin&emsp;&emsp;</p>

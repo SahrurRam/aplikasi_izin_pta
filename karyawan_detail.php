@@ -76,14 +76,6 @@ if ($_GET) {
 		<td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-		<td width="20%"><b>Jumlah Cuti</b></td>
-		<td width="2%"><b>:</b></td>
-		<td width="78%"><?php echo $result['jml_cuti']; ?></td>
-	</tr>
-	<tr>
-		<td colspan="3">&nbsp;</td>
-	</tr>
-	<tr>
 		<td width="20%"><b>Hak Akses</b></td>
 		<td width="2%"><b>:</b></td>
 		<td width="78%"><b><?php echo $result['hak_akses']; ?></b></td>

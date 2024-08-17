@@ -59,6 +59,18 @@ function valid()
 										</div>
 									</div>
 									<div class="form-group">
+										<label class="control-label col-sm-3">Jam Awal Izin</label>
+										<div class="col-sm-4">
+											<input type="time" name="jam_awal" class="form-control" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-3">Jam Akhir Izin</label>
+										<div class="col-sm-4">
+											<input type="time" name="jam_akhir" class="form-control" required>
+										</div>
+									</div>
+									<div class="form-group">
 										<label class="control-label col-sm-3">Keterangan</label>
 										<div class="col-sm-4">
 											<textarea name="keterangan" class="form-control" placeholder="Keterangan" rows="3" required></textarea>
