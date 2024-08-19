@@ -72,7 +72,7 @@
 			<p>NIP&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;: <?php echo $result['npp'];?></p>
 			<p>Unit Kerja&emsp;&emsp;&emsp;&emsp;&ensp;: Pengadilan Tinggi Agama Makassar</p>
 			<p>Pada Hari/Tanggal&emsp; : <?php echo IndonesiaTgl($result['tgl_awal']);?></p>
-			<p>Sampai Pada&emsp;&emsp;&emsp;&ensp;: <?php echo IndonesiaTgl($result['tgl_akhir']);?></p>
+			<p>Pukul&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; : <?php echo ($result['jam_awal']);?> - <?php echo ($result['jam_akhir']);?></p>
 			<p>Untuk keperluan&emsp;&emsp;: <?php echo $result['keterangan'];?></p>
 
 			<p style="text-align: right;">Makassar, <?php echo $tanggal." ".$bulan_ini." ".$tahun ?></p>

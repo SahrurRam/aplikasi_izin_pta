@@ -104,12 +104,6 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-3">Jumlah Cuti</label>
-										<div class="col-sm-3">
-											<input type="number" name="jml" min="0" class="form-control" placeholder="Telepon" value="<?php echo $data['jml_cuti'] ?>"required>
-										</div>
-									</div>
-									<div class="form-group">
 										<label class="control-label col-sm-3">Aktif</label>
 										<div class="col-sm-3">
 											<select name="aktif" id="aktif" class="form-control" required>

@@ -5,6 +5,8 @@ $npp	= $_POST['npp'];
 $ajuan = date('Y-m-d');
 $mulai	= $_POST['mulai'];
 $akhir	= $_POST['akhir'];
+$jam_awal	= $_POST['jam_awal'];
+$jam_akhir	= $_POST['jam_akhir'];
 $ket	= $_POST['keterangan'];
 $mng	= $_POST['mng'];
 $time = $_POST['time'];
@@ -23,7 +25,6 @@ $pgw = "SELECT * FROM employee WHERE npp='$npp'";
 $qpgw = mysqli_query($conn,$pgw);
 $ress = mysqli_fetch_array($qpgw);
 
-$jml = $ress['jml_cuti'];
 
 if($durasi>$jml){
 	echo "<script type='text/javascript'>
@@ -46,5 +47,5 @@ if($durasi>$jml){
 				document.location = 'cuti_create.php'; 
 			</script>";
 	}
-}
+
 ?>

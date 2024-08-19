@@ -41,7 +41,6 @@
 											<th width="5%">Tgl Awal</th>
 											<th width="5%">Tgl Akhir</th>
 											<th width="5%">Status</th>
-											<th width="10%">Ket. Ditolak</th>
 											<th width="5%">Opsi</th>
 										</tr>
 									</thead>
