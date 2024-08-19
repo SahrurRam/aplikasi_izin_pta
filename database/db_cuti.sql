@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 17 Agu 2024 pada 15.10
+-- Waktu pembuatan: 19 Agu 2024 pada 02.25
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -66,24 +66,25 @@ CREATE TABLE `cuti` (
   `lead_app` int NOT NULL DEFAULT '0',
   `spv_app` int NOT NULL DEFAULT '0',
   `mng_app` int NOT NULL DEFAULT '0',
-  `waktu` time NOT NULL
+  `waktu` time NOT NULL,
+  `ttd` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `cuti`
 --
 
-INSERT INTO `cuti` (`no_cuti`, `npp`, `tgl_pengajuan`, `tgl_awal`, `tgl_akhir`, `durasi`, `keterangan`, `leader`, `manager`, `spv`, `stt_cuti`, `ket_reject`, `hrd_app`, `lead_app`, `spv_app`, `mng_app`, `waktu`) VALUES
-('11052019221922', '12345', '2019-05-11', '2019-05-12', '2019-05-13', 2, 'asda', '11111', '', '', 'Menunggu Approval Leader', '', 0, 0, 0, 0, '00:00:00'),
-('12052019121722', '11111', '2019-05-12', '2019-05-14', '2019-05-14', 1, 'Menengok orang tua', '', '33333', '22222', 'Menunggu Approval HRD', '', 0, 0, 0, 0, '00:00:00'),
-('12052019143232', '22222', '2019-05-12', '2019-05-16', '2019-05-16', 1, 'Jalan jalan', '', '33333', '', 'Menunggu Approval HRD', '', 0, 0, 0, 0, '00:00:00'),
-('13052019195049', '33333', '2019-05-13', '2019-05-14', '2019-05-14', 1, 'asdakjd', '', '', '', 'Approved', '', 1, 0, 0, 0, '00:00:00'),
-('14052019105620', '12345', '2019-05-14', '2019-05-16', '2019-05-17', 2, 'kjfsk', '11111', '33333', '22222', 'Approved', '', 1, 1, 1, 1, '00:00:00'),
-('17082024215813', '11111', '2024-08-17', '2024-08-17', '2024-08-17', 1, 'test', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '22:58:00'),
-('17082024220108', '11111', '2024-08-17', '2024-08-23', '2024-08-23', 1, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '22:00:00'),
-('17082024220342', '11111', '2024-08-17', '2024-08-22', '2024-08-23', 2, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '10:03:00'),
-('17082024220542', '11111', '2024-08-17', '2024-08-19', '2024-08-20', 2, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '00:00:00'),
-('17082024221000', '11111', '2024-08-17', '2024-08-19', '2024-08-20', 2, 'Sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '23:09:00');
+INSERT INTO `cuti` (`no_cuti`, `npp`, `tgl_pengajuan`, `tgl_awal`, `tgl_akhir`, `durasi`, `keterangan`, `leader`, `manager`, `spv`, `stt_cuti`, `ket_reject`, `hrd_app`, `lead_app`, `spv_app`, `mng_app`, `waktu`, `ttd`) VALUES
+('11052019221922', '12345', '2019-05-11', '2019-05-12', '2019-05-13', 2, 'asda', '11111', '', '', 'Menunggu Approval Leader', '', 0, 0, 0, 0, '00:00:00', ''),
+('12052019121722', '11111', '2019-05-12', '2019-05-14', '2019-05-14', 1, 'Menengok orang tua', '', '33333', '22222', 'Approved', '', 1, 0, 0, 0, '00:00:00', 'nun-with-tattoo-anime-girl-tongue-out-hd-wallpaper-uhdpaper.com-728@0@j.jpg'),
+('12052019143232', '22222', '2019-05-12', '2019-05-16', '2019-05-16', 1, 'Jalan jalan', '', '33333', '', 'Menunggu Approval Admin', '', 0, 0, 0, 0, '00:00:00', ''),
+('13052019195049', '33333', '2019-05-13', '2019-05-14', '2019-05-14', 1, 'asdakjd', '', '', '', 'Approved', '', 1, 0, 0, 0, '00:00:00', ''),
+('14052019105620', '12345', '2019-05-14', '2019-05-16', '2019-05-17', 2, 'kjfsk', '11111', '33333', '22222', 'Approved', '', 1, 1, 1, 1, '00:00:00', ''),
+('17082024215813', '11111', '2024-08-17', '2024-08-17', '2024-08-17', 1, 'test', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '22:58:00', ''),
+('17082024220108', '11111', '2024-08-17', '2024-08-23', '2024-08-23', 1, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '22:00:00', ''),
+('17082024220342', '11111', '2024-08-17', '2024-08-22', '2024-08-23', 2, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '10:03:00', ''),
+('17082024220542', '11111', '2024-08-17', '2024-08-19', '2024-08-20', 2, 'sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '00:00:00', ''),
+('17082024221000', '11111', '2024-08-17', '2024-08-19', '2024-08-20', 2, 'Sakit', NULL, '33333', NULL, 'Menunggu Approval Pejabat', NULL, 0, 0, 0, 0, '23:09:00', '');
 
 -- --------------------------------------------------------
 
