@@ -34,6 +34,7 @@ if($durasi>$jml){
 }else{
 	$sql 	= "INSERT INTO cuti (no_cuti, npp, tgl_pengajuan, tgl_awal, tgl_akhir, durasi, keterangan, manager, stt_cuti, waktu) 
 				VALUES ('$id','$npp','$ajuan','$mulai','$akhir','$durasi','$ket','$mng','$stt_cuti','$time')";
+}
 	$query 	= mysqli_query($conn,$sql);
 	if($query){
 		echo "<script type='text/javascript'>
