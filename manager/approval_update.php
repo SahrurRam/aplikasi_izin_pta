@@ -12,14 +12,13 @@ if($aksi=="2"){
 	$sql = "UPDATE cuti SET
 			stt_cuti='". $stt_cuti ."',
 			lead_app='". $null ."',
-			spv_app='". $null ."',
 			ket_reject='". $reject ."'
 			WHERE no_cuti='". $no ."'";
 		$ress = mysqli_query($conn, $sql);
 		header("location: approval_cuti.php?act=update&msg=success");
 	
 }else{
-	$stt_cuti="Menunggu Approval Admin";
+	$stt_cuti="Approved";
 	$num	=1;
 	$sql = "UPDATE cuti SET
 			stt_cuti='". $stt_cuti ."',

@@ -45,7 +45,7 @@ function valid()
 								<div class="panel-heading"><h3>Form Pengajuan Izin</h3></div>
 								<div class="panel-body">
 									<div class="form-group">
-										<label class="control-label col-sm-3">Mulai Izin</label>
+										<label class="control-label col-sm-3">Tanggal Izin</label>
 										<div class="col-sm-4">
 											<input type="date" name="mulai" class="form-control" required>
 											<input type="hidden" name="now" class="form-control" value="<?php echo $now;?>" required>

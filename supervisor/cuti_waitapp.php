@@ -57,7 +57,7 @@
 												echo '<td class="text-center">'. $data['stt_cuti'] .'</td>';
 												echo '<td class="text-center">
 													  <a href="#myModal" data-toggle="modal" data-load-code="'.$data['no_cuti'].'" data-remote-target="#myModal .modal-body" class="btn btn-primary btn-xs">Detail</a>';?>
-													  <a href="cuti_hapus.php?no=<?php echo $data['no_cuti'];?>" onclick="return confirm('Apakah anda yakin akan membatalkan pengajuan cuti No. <?php echo $data['no_cuti'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
+													  <a href="cuti_hapus.php?no_cuti=<?php echo $data['no_cuti'];?>" onclick="return confirm('Apakah anda yakin akan membatalkan pengajuan cuti No. <?php echo $data['no_cuti'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
 												<?php
 													  echo '</td>';
 												echo '</tr>';												

@@ -11,8 +11,6 @@ if($aksi=="2"){
 	$stt_cuti="Rejected";
 	$sql = "UPDATE cuti SET
 			stt_cuti='". $stt_cuti ."',
-			lead_app='". $null ."',
-			spv_app='". $null ."',
 			mng_app='". $null ."',
 			ket_reject='". $reject ."'
 			WHERE no_cuti='". $no ."'";
