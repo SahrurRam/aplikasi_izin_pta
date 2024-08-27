@@ -6,6 +6,8 @@
 	$menuparent = "cuti";
 	include("layout_top.php");
 	$now = date('Y-m-d');
+	$timeZone = new DateTime('now', new DateTimeZone('Asia/Makassar'));
+	$timeZone->setTimezone(new DateTimeZone('Asia/Makassar'));
 	$npp = $sess_spvid;
 ?>
 <script type="text/javascript">
@@ -58,6 +60,12 @@ function valid()
 											<input type="date" name="akhir" class="form-control" required>
 										</div>
 									</div>
+									<!-- <div class="form-group">
+										<label class="control-label col-sm-3">Waktu Izin</label>
+										<div class="col-sm-4"> -->
+											<input type="hidden" name="time" value="<?php echo $timeZone->format('H:i'); ?>" class="form-control" >
+										<!-- </div>
+									</div> -->
 									<div class="form-group">
 										<label class="control-label col-sm-3">Jam Awal Izin</label>
 										<div class="col-sm-4">

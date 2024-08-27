@@ -96,6 +96,12 @@ $(document).ready(function() {
 										</div>
 									</div>
 									<div class="form-group">
+										<label class="control-label col-sm-3">Aksi</label>
+										<div class="col-sm-4">
+											<input type="file" name="ttd" class="form-control" required>
+										</div>
+									</div>
+									<div class="form-group">
 										<label class="control-label col-sm-3">Keterangan Reject</label>
 										<div class="col-sm-4">
 											<textarea name="reject" id="reject" class="form-control" placeholder="Keterangan Reject" rows="3" disabled></textarea>
