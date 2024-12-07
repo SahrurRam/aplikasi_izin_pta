@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Semua Data Cuti</h1>
+                        <h1 class="page-header">Semua Data Izin</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -35,7 +35,7 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">No Cuti</th>
+											<th width="10%">No Izin</th>
 											<th width="10%">Nama Pemohon</th>
 											<th width="5%">Tgl Pengajuan</th>
 											<th width="5%">Tgl Awal</th>

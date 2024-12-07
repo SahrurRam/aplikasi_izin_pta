@@ -32,8 +32,9 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">NPP</th>
+											<th width="10%">NIP</th>
 											<th width="10%">Nama</th>
+											<th width="10%">Jabatan</th>
 											<th width="5%">Telepon</th>
 											<th width="10%">Akses</th>
 											<th width="10%">Opsi</th>
@@ -49,6 +50,7 @@
 												echo '<td class="text-center">'. $i .'</td>';
 												echo '<td class="text-center">'. $data['npp'] .'</td>';
 												echo '<td class="text-center">'. $data['nama_emp'] .'</td>';
+												echo '<td class="text-center">'. $data['jabatan'] .'</td>';
 												echo '<td class="text-center">'. $data['telp_emp'] .'</td>';
 												echo '<td class="text-center">'. $data['hak_akses'] .'</td>';
 												echo '<td class="text-center">
@@ -86,7 +88,7 @@
 			"responsive": true,
 			"processing": true,
 			"columnDefs": [
-				{ "orderable": false, "targets": [5] }
+				{ "orderable": false, "targets": [6] }
 			]
 		});
 		

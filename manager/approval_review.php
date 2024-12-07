@@ -41,10 +41,10 @@ $(document).ready(function() {
 					<div class="col-lg-12">
 						<form class="form-horizontal" name="cuti" action="approval_update.php" method="POST" enctype="multipart/form-data" onSubmit="return valid();">
 							<div class="panel panel-default">
-								<div class="panel-heading"><h3>Review Pengajuan Cuti</h3></div>
+								<div class="panel-heading"><h3>Review Pengajuan Izin</h3></div>
 								<div class="panel-body">
 									<div class="form-group">
-										<label class="control-label col-sm-3">No. Cuti</label>
+										<label class="control-label col-sm-3">No. Izin</label>
 										<div class="col-sm-4">
 											<input type="text" name="no" class="form-control" value="<?php echo $data['no_cuti'];?>" readonly>
 										</div>

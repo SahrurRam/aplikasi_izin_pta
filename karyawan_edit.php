@@ -98,17 +98,9 @@
 										<div class="col-sm-3">
 											<select name="akses" id="akses" class="form-control" required>
 												<option value="<?php echo $data['hak_akses'] ?>" selected><?php echo $data['hak_akses'] ?></option>
-												<option value="Leader">Leader</option>
-												<option value="Manager">Manager</option>
-												<option value="Pegawai">Pegawai</option>
-												<option value="Supervisor">Supervisor</option>
+												<option value="Pejabat">Pejabat</option>
+												<option value="Staff">Staff</option>
 											</select>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-sm-3">Jumlah Cuti</label>
-										<div class="col-sm-3">
-											<input type="number" name="jml" min="0" class="form-control" placeholder="Telepon" value="<?php echo $data['jml_cuti'] ?>"required>
 										</div>
 									</div>
 									<div class="form-group">

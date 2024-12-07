@@ -6,7 +6,7 @@
 	$ress_e = mysqli_query($conn, $sql_e);
 	$e = mysqli_num_rows($ress_e);
 	
-	$sql_wait = "SELECT no_cuti FROM cuti WHERE stt_cuti='Menunggu APproval HRD'";
+	$sql_wait = "SELECT no_cuti FROM cuti WHERE stt_cuti='Menunggu Approval Admin'";
 	$ress_wait = mysqli_query($conn, $sql_wait);
 	$wait = mysqli_num_rows($ress_wait);
 	

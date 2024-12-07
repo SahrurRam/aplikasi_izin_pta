@@ -2,7 +2,7 @@
 	include("sess_check.php");
 	
 	// deskripsi halaman
-	$pagedesc = "Approval";
+	$pagedesc = "Data Approval";
 	include("layout_top.php");
 	include("dist/function/format_tanggal.php");
 	include("dist/function/format_rupiah.php");
@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Semua Data Approval Cuti</h1>
+                        <h1 class="page-header">Semua Data Persetujuan Izin</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -36,7 +36,7 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">No Cuti</th>
+											<th width="10%">No Izin</th>
 											<th width="10%">Nama Pemohon</th>
 											<th width="5%">Tgl Pengajuan</th>
 											<th width="5%">Tgl Awal</th>
@@ -60,7 +60,6 @@
 													  ';
 													  if($data['hrd_app']==1){
 														  ?>
-														  <a href="app_cetak.php?no=<?php echo $data['no_cuti'];?>" target="_blank" class="btn btn-warning btn-xs">Cetak</a>
 													<?php
 														  
 													  }

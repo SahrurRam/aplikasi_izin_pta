@@ -35,8 +35,8 @@ if(isset($_POST['login'])) {
 				}else{
 					header("location: login.php?err=not_found");
 				}
-			}else if($akses=="Lead"){
-				$aks = "Leader";
+			}else if($akses=="Pejabat"){			
+				$aks = "Pejabat";
 				$sql = "SELECT * FROM employee WHERE hak_akses='".$aks."' AND npp='". $username ."' AND password='". $password ."'";
 				$ress = mysqli_query($conn, $sql);
 				$rows = mysqli_num_rows($ress);
@@ -44,44 +44,14 @@ if(isset($_POST['login'])) {
 				// mendaftarkan session jika username di temukan
 				if($rows == 1) {
 					// membuat variabel session
-					$_SESSION['leader'] = strtolower($dataku['npp']);
-					// mengarahkan ke halaman indeks.php
-					header("location: leader/index.php?login=success");
-				}else{
-					header("location: login.php?err=not_found");
-				}
-			}else if($akses=="Mng"){			
-				$aks = "Manager";
-				$sql = "SELECT * FROM employee WHERE hak_akses='".$aks."' AND npp='". $username ."' AND password='". $password ."'";
-				$ress = mysqli_query($conn, $sql);
-				$rows = mysqli_num_rows($ress);
-				$dataku = mysqli_fetch_array($ress);
-				// mendaftarkan session jika username di temukan
-				if($rows == 1) {
-					// membuat variabel session
-					$_SESSION['manager'] = strtolower($dataku['npp']);
+					$_SESSION['Pejabat'] = strtolower($dataku['npp']);
 					// mengarahkan ke halaman indeks.php
 					header("location: manager/index.php?login=success");
 				}else{
 					header("location: login.php?err=not_found");
 				}
-			}else if($akses=="Pgw"){		
-				$aks = "Pegawai";
-				$sql = "SELECT * FROM employee WHERE hak_akses='".$aks."' AND npp='". $username ."' AND password='". $password ."'";
-				$ress = mysqli_query($conn, $sql);
-				$rows = mysqli_num_rows($ress);
-				$dataku = mysqli_fetch_array($ress);
-				// mendaftarkan session jika username di temukan
-				if($rows == 1) {
-					// membuat variabel session
-					$_SESSION['pegawai'] = strtolower($dataku['npp']);
-					// mengarahkan ke halaman indeks.php
-					header("location: pegawai/index.php?login=success");
-				}else{
-					header("location: login.php?err=not_found");
-				}
 			}else{			
-				$aks = "Supervisor";
+				$aks = "Staff";
 				$sql = "SELECT * FROM employee WHERE hak_akses='".$aks."' AND npp='". $username ."' AND password='". $password ."'";
 				$ress = mysqli_query($conn, $sql);
 				$rows = mysqli_num_rows($ress);
@@ -89,7 +59,7 @@ if(isset($_POST['login'])) {
 				// mendaftarkan session jika username di temukan
 				if($rows == 1) {
 					// membuat variabel session
-					$_SESSION['supervisor'] = strtolower($dataku['npp']);
+					$_SESSION['Staff'] = strtolower($dataku['npp']);
 					// mengarahkan ke halaman indeks.php
 					header("location: supervisor/index.php?login=success");
 				}else{

@@ -2,7 +2,7 @@
 	// memulai session
 	session_start();
 	// membaca nilai variabel session 
-	$chk_sess = $_SESSION['supervisor'];
+	$chk_sess = $_SESSION['Staff'];
 	// memanggil file koneksi
 	include("dist/config/koneksi.php");
 	include("dist/config/library.php");

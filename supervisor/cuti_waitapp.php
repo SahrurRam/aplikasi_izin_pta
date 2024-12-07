@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Cuti Menunggu Approval</h1>
+                        <h1 class="page-header">Data Izin Menunggu Persetujuan</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 				
@@ -36,8 +36,9 @@
 									<thead>
 										<tr>
 											<th width="1%">No</th>
-											<th width="10%">No Cuti</th>
+											<th width="10%">No Izin</th>
 											<th width="5%">Tgl Pengajuan</th>
+											<th width="5%">Waktu Pengajuan</th>
 											<th width="5%">Tgl Awal</th>
 											<th width="5%">Tgl Akhir</th>
 											<th width="5%">Status</th>
@@ -52,16 +53,17 @@
 												echo '<td class="text-center">'. $i .'</td>';
 												echo '<td class="text-center">'. $data['no_cuti'] .'</td>';
 												echo '<td class="text-center">'. IndonesiaTgl($data['tgl_pengajuan']) .'</td>';
+												echo '<td class="text-center">'. ($data['waktu']) .'</td>';
 												echo '<td class="text-center">'. IndonesiaTgl($data['tgl_awal']) .'</td>';
 												echo '<td class="text-center">'. IndonesiaTgl($data['tgl_akhir']) .'</td>';
 												echo '<td class="text-center">'. $data['stt_cuti'] .'</td>';
 												echo '<td class="text-center">
 													  <a href="#myModal" data-toggle="modal" data-load-code="'.$data['no_cuti'].'" data-remote-target="#myModal .modal-body" class="btn btn-primary btn-xs">Detail</a>';?>
-													  <a href="cuti_hapus.php?no=<?php echo $data['no_cuti'];?>" onclick="return confirm('Apakah anda yakin akan membatalkan pengajuan cuti No. <?php echo $data['no_cuti'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
+													  <a href="cuti_hapus.php?no_cuti=<?php echo $data['no_cuti'];?>" onclick="return confirm('Apakah anda yakin akan membatalkan pengajuan cuti No. <?php echo $data['no_cuti'];?>?');" class="btn btn-danger btn-xs">Hapus</a></td>
 												<?php
 													  echo '</td>';
 												echo '</tr>';												
-												$i++;
+												$i++; 
 											}
 										?>
 									</tbody>

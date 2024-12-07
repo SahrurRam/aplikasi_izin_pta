@@ -10,7 +10,7 @@
 
 	<title>Sistem Informasi Pengajuan Izin - <?php echo $pagedesc ?></title>
 
-	<link href="libs/images/isk-logo.jpg" rel="icon" type="images/x-icon">
+	<link href="libs/images/logo-pta.png" rel="icon" type="images/x-icon">
 
 	<!-- Bootstrap Core CSS -->
 	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,10 +64,8 @@
 											<select class="form-control" name="akses" required>
 											<option value="">======= Login Sebagai =======</option>
 											<option value="Admin">Administrator</option>
-											<option value="Lead">Leader</option>
-											<option value="Mng">Manager</option>
-											<option value="Pgw">Pegawai</option>
-											<option value="Spv">Supervisor</option>
+											<option value="Pejabat">Pejabat</option>
+											<option value="Staff">Staff</option>
 											</select>
 										</div>
 										<div class="form-group">

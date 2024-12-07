@@ -13,7 +13,7 @@ $int = $start->diff($finish);
 $dur = $int->days;
 $durasi = $dur+1;
 
-$stt = "Menunggu Approval HRD";
+$stt_cuti = "Menunggu Approval Manager";
 
 $id = date('dmYHis');
 
@@ -21,17 +21,8 @@ $pgw = "SELECT * FROM employee WHERE npp='$npp'";
 $qpgw = mysqli_query($conn,$pgw);
 $ress = mysqli_fetch_array($qpgw);
 
-$jml = $ress['jml_cuti'];
-
-
-if($durasi>$jml){
-	echo "<script type='text/javascript'>
-			alert('Durasi cuti lebih banyak dari jumlah cuti tersedia!.'); 
-			document.location = 'cuti_create.php'; 
-		</script>";	
-}else{
 	$sql 	= "INSERT INTO cuti (no_cuti, npp, tgl_pengajuan, tgl_awal, tgl_akhir, durasi, keterangan, stt_cuti) 
-				VALUES ('$id','$npp','$ajuan','$mulai','$akhir','$durasi','$ket','$stt')";
+				VALUES ('$id','$npp','$ajuan','$mulai','$akhir','$durasi','$ket','$stt_cuti')";
 	$query 	= mysqli_query($conn,$sql);
 	if($query){
 		echo "<script type='text/javascript'>
@@ -45,5 +36,4 @@ if($durasi>$jml){
 				document.location = 'cuti_create.php'; 
 			</script>";
 	}
-}
 ?>

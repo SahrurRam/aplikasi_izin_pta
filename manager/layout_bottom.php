@@ -3,7 +3,7 @@
 	<!-- footer-bottom -->
 	<div class="navbar navbar-inverse navbar-fixed-bottom footer-bottom">
 		<div class="container text-center">
-			<p class="text-center" style="color: #D1C4E9; margin: 0 0 5px; padding: 0"><small>Pengadilan Tinggi Agama Makassar</p>
+			<p class="text-center" style="color: #D1C4E9; margin: 0 0 5px; padding: 0"><small>Sistem Informasi Pengajuan Izin Pengadilan Tinggi Agama Makassar</p>
 		</div>
 	</div><!-- /.footer-bottom -->
 

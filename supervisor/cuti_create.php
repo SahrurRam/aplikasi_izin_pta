@@ -6,6 +6,8 @@
 	$menuparent = "cuti";
 	include("layout_top.php");
 	$now = date('Y-m-d');
+	$timeZone = new DateTime('now', new DateTimeZone('Asia/Makassar'));
+	$timeZone->setTimezone(new DateTimeZone('Asia/Makassar'));
 	$npp = $sess_spvid;
 ?>
 <script type="text/javascript">
@@ -30,7 +32,7 @@ function valid()
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Pengajuan Cuti</h1>
+                        <h1 class="page-header">Pengajuan Izin</h1>
                     </div><!-- /.col-lg-12 -->
                 </div><!-- /.row -->
 
@@ -42,10 +44,10 @@ function valid()
 					<div class="col-lg-12">
 						<form class="form-horizontal" name="cuti" action="cuti_insert.php" method="POST" enctype="multipart/form-data" onSubmit="return valid();">
 							<div class="panel panel-default">
-								<div class="panel-heading"><h3>Form Pengajuan Cuti</h3></div>
+								<div class="panel-heading"><h3>Form Pengajuan Izin</h3></div>
 								<div class="panel-body">
 									<div class="form-group">
-										<label class="control-label col-sm-3">Mulai Cuti</label>
+										<label class="control-label col-sm-3">Tanggal Izin</label>
 										<div class="col-sm-4">
 											<input type="date" name="mulai" class="form-control" required>
 											<input type="hidden" name="now" class="form-control" value="<?php echo $now;?>" required>
@@ -53,9 +55,27 @@ function valid()
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-3">Akhir Cuti</label>
+										<label class="control-label col-sm-3">Akhir Izin</label>
 										<div class="col-sm-4">
 											<input type="date" name="akhir" class="form-control" required>
+										</div>
+									</div>
+									<!-- <div class="form-group">
+										<label class="control-label col-sm-3">Waktu Izin</label>
+										<div class="col-sm-4"> -->
+											<input type="hidden" name="time" value="<?php echo $timeZone->format('H:i'); ?>" class="form-control" >
+										<!-- </div>
+									</div> -->
+									<div class="form-group">
+										<label class="control-label col-sm-3">Jam Awal Izin</label>
+										<div class="col-sm-4">
+											<input type="time" name="jam_awal" class="form-control" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-3">Jam Akhir Izin</label>
+										<div class="col-sm-4">
+											<input type="time" name="jam_akhir" class="form-control" required>
 										</div>
 									</div>
 									<div class="form-group">
@@ -65,12 +85,12 @@ function valid()
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-3">Manager</label>
+										<label class="control-label col-sm-3">Pejabat</label>
 										<div class="col-sm-4">
 											<select name="mng" id="mng" class="form-control" required>
-											<option value="" selected>======== Pilih Manager ========</option>
+											<option value="" selected>======== Pilih Pejabat ========</option>
 												<?php
-													$mySql = "SELECT * FROM employee WHERE hak_akses='Manager' AND active='Aktif' ORDER BY nama_emp";
+													$mySql = "SELECT * FROM employee WHERE hak_akses='Pejabat' ORDER BY nama_emp";
 													$myQry = mysqli_query($conn, $mySql);
 													$dataLeader = $result['npp'];
 													while ($leaderData = mysqli_fetch_array($myQry)) {
